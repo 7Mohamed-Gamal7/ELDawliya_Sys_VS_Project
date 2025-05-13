@@ -1,0 +1,15 @@
+﻿Public Class BaseHRForm
+    ' هنا تقوم بإنشاء كائن من الفورم
+    Private frmAddEmployee As New Frm_Add_Employee()
+
+    Private Sub موظفجديدToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles موظفجديدToolStripMenuItem.Click
+        ' التأكد من أن الفورم غير مفتوح بالفعل
+        If frmAddEmployee.IsDisposed Then
+            frmAddEmployee = New Frm_Add_Employee()
+        End If
+
+        frmAddEmployee.Show()
+        frmAddEmployee.BringToFront()
+    End Sub
+
+End Class
